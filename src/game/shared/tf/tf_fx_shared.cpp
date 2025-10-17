@@ -116,10 +116,10 @@ Vector g_vecFixedWpnSpreadPellets[] =
 	Vector( -1,0,0 ),	
 	Vector( 0,-1,0 ),	
 	Vector( 0,1,0 ),	
-	Vector( 0.85,-0.85,0 ),	
-	Vector( 0.85,0.85,0 ),	
-	Vector( -0.85,-0.85,0 ),	
-	Vector( -0.85,0.85,0 ),	
+	Vector( 1,-1,0 ),	
+	Vector( 1,1,0 ),	
+	Vector( -1,-1,0 ),	
+	Vector( -1,1,0 ),	
 	Vector( 0,0,0 ),	// last pellet goes down the middle as well to reward fine aim
 };
 
@@ -332,7 +332,7 @@ void FX_FireBullets( CTFWeaponBase *pWpn, int iPlayer, const Vector &vecOrigin, 
 				{
 					iSpread -= ARRAYSIZE( g_vecFixedWpnSpreadPellets );
 				}
-				float flScalar = 0.5f;
+				float flScalar = 1.f;
 				x = g_vecFixedWpnSpreadPellets[iSpread].x * flScalar;
 				y = g_vecFixedWpnSpreadPellets[iSpread].y * flScalar;
 			}
